@@ -8,9 +8,12 @@ import {Ecommerce, Orders, Calendar, Employees, Stacked,
         Pyramid, Customers, Kanban, Area, Bar, Line, Pie, Financial,
         ColorPicker, ColorMapping, Editor} from './pages'; 
 
+import { useStateContext } from './contexts/ContextProvider';  
+
 // https://www.youtube.com/watch?v=jx5hdo50a2M 51:00 
 const App = () => {
-    const activeMenu = true;
+    const {activeMenu} = useStateContext();
+
   return (
     <div>
         <BrowserRouter>
